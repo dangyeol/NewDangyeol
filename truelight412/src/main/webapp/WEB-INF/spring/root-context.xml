@@ -9,8 +9,6 @@
 	<bean id="MongoDAO" class="com.test.tl.dao.MongoDAO"
 		p:mongoTemplate-ref="mongoTemplate" />
 
-
-
 	<!-- Service -->
 	<bean id="MemberService" class="com.test.tl.service.imp.MemberServiceImp"
 		p:mongoDAO-ref="MongoDAO" />
