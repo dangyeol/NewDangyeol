@@ -3,12 +3,12 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
-	<definition name="home" templateExpression="/WEB-INF/views/home.jsp">
+	<definition name="index" templateExpression="/WEB-INF/views/index.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
 	</definition>
 
-	<definition name="*/*" extends="home">
+	<definition name="*/*" extends="index">
 		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
 	</definition>
 
