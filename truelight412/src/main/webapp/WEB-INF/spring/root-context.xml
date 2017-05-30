@@ -9,11 +9,17 @@
 	<bean id="MongoDAO" class="com.test.tl.dao.MongoDAO"
 		p:mongoTemplate-ref="mongoTemplate" />
 
+	<bean id="ProductDAO" class="com.test.tl.dao.ProductDAO"
+		p:mongoTemplate-ref="mongoTemplate" />
+		
+    <bean id="MemberDAO" class="com.test.tl.dao.MemberDAO"
+		p:mongoTemplate-ref="mongoTemplate" />
+
 	<!-- Service -->
 	<bean id="MemberService" class="com.test.tl.service.imp.MemberServiceImp"
-		p:mongoDAO-ref="MongoDAO" />
+		p:mongoDAO-ref="MongoDAO" p:memberDAO-ref="MemberDAO"/>
 
 	<bean id="ProductService" class="com.test.tl.service.imp.ProductServiceImp"
-		p:mongoDAO-ref="MongoDAO" />
+		p:mongoDAO-ref="MongoDAO" p:productDAO-ref="ProductDAO" />
 
 </beans>

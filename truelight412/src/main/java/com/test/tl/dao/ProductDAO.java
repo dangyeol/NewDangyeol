@@ -6,11 +6,10 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
 
 import com.test.tl.dto.ProductVO;
 
-public class MongoDAO {
+public class ProductDAO {
 
 	private MongoTemplate mongoTemplate;
 
@@ -18,31 +17,25 @@ public class MongoDAO {
 		this.mongoTemplate = mongoTemplate;
 	}
 
-	public MongoDAO() {
+	public ProductDAO() {
 		String mongoContextPath = "/mongoContext.xml";
 		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext(mongoContextPath);
 		mongoTemplate = (MongoTemplate) ctx.getBean("mongoTemplate");
 
 	}
-	
 
-	public void insert(Object object, String collectionName) {
+	public List<ProductVO> Find(Query query) {
 
-		mongoTemplate.insert(object, collectionName);
+		List<ProductVO> list = (List<ProductVO>) mongoTemplate.find(query, ProductVO.class, "product");
 
+		return list;
 	}
 
-	public void update(Query query, Update update, String collectionName) {
+	public ProductVO FindOne(Query query) {
+		
+		ProductVO productVO = mongoTemplate.findOne(query, ProductVO.class, "product");
 
-		mongoTemplate.updateFirst(query, update, collectionName);
-
+		return productVO;
 	}
-
-	public void delete(Query query, String collectionName) {
-		mongoTemplate.remove(query, collectionName);
-
-	}
-
-	
 
 }

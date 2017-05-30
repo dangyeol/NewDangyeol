@@ -14,7 +14,14 @@ public class MainController {
 
 		return str;
 	}
-	
 
+	@RequestMapping("/login")
+	public String LoginForm() {
+
+		String str = "loginForm";
+
+		return str;
+
+	}
 
 }

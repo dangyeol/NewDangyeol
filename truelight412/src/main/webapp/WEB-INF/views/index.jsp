@@ -16,29 +16,10 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/css/index.css" />
-<style>
-html, body {
-	height: 100%
-}
-
-body {
-	margin: 0
-}
-
-#container {
-	min-height: 100%
-}
-
-#content {
-	padding-bottom: 1.9em
-}
-
-#foot {
-	margin-top: -1.9em;
-	height: 1.9em
-}
-</style>
-
+	
+	
+	<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/resources/css/login.css" />
 <title>´Ü°á</title>
 
 </head>

@@ -6,6 +6,19 @@ public class ProductVO {
 	private String pro_Url;
 	private String pro_Price;
 	private String pro_EndDate;
+	private String pro_Category;
+	
+	
+	
+	
+
+	public String getPro_Category() {
+		return pro_Category;
+	}
+
+	public void setPro_Category(String pro_Category) {
+		this.pro_Category = pro_Category;
+	}
 
 	public String getPro_Name() {
 		return pro_Name;

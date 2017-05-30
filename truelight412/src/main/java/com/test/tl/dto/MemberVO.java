@@ -5,6 +5,15 @@ public class MemberVO {
 	private String mem_Email;
 	private String mem_Pwd;
 	private String mem_Name;
+	private String mem_Phone;
+
+	public String getMem_Phone() {
+		return mem_Phone;
+	}
+
+	public void setMem_Phone(String mem_Phone) {
+		this.mem_Phone = mem_Phone;
+	}
 
 	public String getMem_Email() {
 		return mem_Email;
